@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+  font-family: 'MinecraftFont';
+  src: url('/source/Minecraft_1.1.ttf') format('ttf');
+}
+
+
+
+body {
+	margin: 0;
+  	background: url(/source/idel.jpg) no-repeat center center fixed;
+  	background-size: cover;
+/*  	overflow: hidden;*/
+  	position: relative;
+
+}
+
+.cat{
+	width: 256px;
+  	height: 192px;
+  	background-image: url('/source/Cat.png');
+  	background-size: 2048px 192px;
+  	background-repeat: no-repeat;
+  	position: absolute;
+  	bottom: 10vh;
+  	left: 0;
+  	animation: runSprite 1s steps(8) infinite;
+  	transition: left 0.3s linear, top 0.3s linear;
+	 
+}
+
+@keyframes runSprite {
+  	from {
+    	background-position: 0 0;
+  	}
+  	to {
+    	background-position: -2048px 0;
+  	}
+}
+.cat.sit {
+	background-image: url('/source/CatFinalSit.png');
+	width: 256px;
+	height: 256px;
+	background-size: 1024px 256px;
+  	animation: sitSprite 1s steps(4) infinite;
+}
+
+@keyframes sitSprite {
+  	from {
+    	background-position: 0 0;
+  	}
+  	to {
+    	background-position: -1024px 0;
+  	}
+}
+.cat.ymuva{
+	background-image: url('/source/CatYmuva0.png');
+	width: 256px;
+	height: 192px;
+	background-size: 1072px 192px;
+	animation: ymuvaSprite 0.5s steps(4) infinite;
+}
+@keyframes ymuvaSprite {
+  	from {
+    	background-position: 0 0;
+  	}
+  	to {
+    	background-position: -1024px 0;
+  	}
+}
+/*-----------------------------------------*/
+
+
+
+
+
+
+.start{
+	height: 100%;
+    display: flex;
+    justify-content: center; /* по горизонталі */
+    align-items: flex-start; /* по вертикалі зверху */
+    padding-top: 40vh; /* відступ зверху 40% висоти вікна */
+	
+
+}
+
+button {
+	font-family: "Press Start 2P", system-ui;
+	position: absolute;
+	font-weight: 400;
+  	font-style: normal;
+	background-color: #808080; 
+	border: 2px solid #404040; 
+	color: white; 
+	padding: 20px 40px; 
+	text-align: center; 
+	text-decoration: none; 
+	display: inline-block; 
+	font-size: 40px; 
+	cursor: pointer; 
+	border-radius: 5px; 
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.7); 
+	transition: all 0.3s ease; 	
+}
+
+button.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+/*----------------------------*/
+.cat.start{
+	width: 256px;
+  	height: 270px;
+  	background-image: url('/source/CatJump.png');
+  	background-size: 2048px 270px;
+  	background-repeat: no-repeat;
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	animation: runStartSprite 0.8s steps(8) infinite;
+  	transition: left 0.5s ease, top 0.5s ease;
+	 
+}
+  	
+@keyframes runStartSprite {
+  	from {
+    	background-position: 0 0;
+  	}
+  	to {
+    	background-position: -2048px 0;
+  	}
+}
+
+.cat.finalsit {
+	background-image: url('/source/sit0\(1\)\(1\).png');
+	width: 256px;
+	height: 192px;
+	background-size: 1024px 192px;
+  	animation: sitfinalSprite 1s steps(4) infinite;
+}
+
+@keyframes sitfinalSprite {
+  	from {
+    	background-position: 0 0;
+  	}
+  	to {
+    	background-position: -1024px 0;
+  	}
+}
+
+/*-------------------------------------------------------*/
+
+#dialog {
+	transform: scaleX(1);
+  	position: absolute;
+  	bottom: 100%;
+  	left: 50%;
+  	transform: translateX(-50%);
+  	margin-bottom: 10px;
+ 	max-width: 600px;
+ 	padding: 40px 80px;
+  	background: white;
+  	border-radius: 12px;
+  	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  	font-family: "Press Start 2P",sans-serif;
+  	font-size: 40px;
+  	line-height: 1.4;
+  	color: black;
+  	display: none;
+  	z-index: 5;
+	border: 6px solid black;
+}
